@@ -31,6 +31,7 @@ O repositório inclui os seguintes guias:
 - `guia_django_uv.md`: Configuração de projetos Django.
 - `guia_fastapi_uv.md`: Configuração de APIs com FastAPI.
 - `guia_flet_uv.md`: Desenvolvimento de interfaces gráficas com Flet.
+- `guia_jupyter_uv.md`: Configuração de ambiente para Ciência de Dados com Jupyter.
 - `guia_streamlit_uv.md`: Criação de dashboards e apps com Streamlit.
 
 ## Uso Básico

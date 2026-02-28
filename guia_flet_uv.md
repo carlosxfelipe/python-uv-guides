@@ -30,8 +30,6 @@ uv add flet
 
 ## 4. Exemplo de `main.py`
 
-def main(page: ft.Page):
-
 ```python
 import flet as ft
 

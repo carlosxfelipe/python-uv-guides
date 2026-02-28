@@ -39,7 +39,7 @@ def read_root():
 ### 5. Inicie o servidor de desenvolvimento
 
 ```bash
-uv run uvicorn main:app --reload
+uv run fastapi dev main.py
 ```
 
 ### 6. Acesse a aplicação no navegador
