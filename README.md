@@ -41,3 +41,13 @@ Cada guia fornece instruções específicas, mas o fluxo geral consiste em:
 1. Inicializar o projeto: `uv init nome_do_projeto`
 2. Adicionar dependências: `uv add nome_do_pacote`
 3. Executar o código: `uv run python main.py`
+
+## Dicas Extras
+
+### Sincronizando e Exportando pacotes
+
+Sempre que você usar o `uv add`, o `uv` vai atualizar o arquivo `pyproject.toml` e gerar/atualizar o documento `uv.lock`. Se em algum momento você precisar exportar essas dependências para um formato padrão puro do `pip` (geralmente útil para plataformas de CI/CD antigas ou deploy sem o `uv`), você pode usar:
+
+```bash
+uv pip compile pyproject.toml -o requirements.txt
+```

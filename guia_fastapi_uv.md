@@ -49,3 +49,11 @@ Abra o navegador e vá para:
 
 Você também pode acessar a documentação automática da API em:
 **http://localhost:8000/docs**
+
+### 7. Inicie o servidor em modo de Produção
+
+Quando você for fazer o deploy ou não quiser auto-reload ativado, utilize a CLI para produção:
+
+```bash
+uv run fastapi run main.py
+```
