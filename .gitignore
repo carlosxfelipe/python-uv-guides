@@ -1,5 +1,5 @@
 # macOS
 .DS_Store
 
-# Ignorar todos os subdiretórios (projetos Django criados)
+# Ignorar todos os subdiretórios (projetos Python criados a partir dos guias)
 */
