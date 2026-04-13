@@ -44,10 +44,18 @@ uv run flask run --debug
 
 *(A flag `--debug` é fundamental pois ativa o ambiente de desenvolvimento e o hot-reload automático quando você edita e salva o código).*
 
+> **Aviso para usuários de macOS (Monterey ou superior):**
+> O macOS reserva a porta `5000` para o serviço de "Receptor AirPlay", o que vai gerar um erro "HTTP ERROR 403 - Acesso Negado" no seu navegador. 
+> Para evitar isso, rode o servidor especificando uma porta livre, como a `5001`:
+> ```bash
+> uv run flask run --debug --port 5001
+> ```
+> *(Alternativamente, você pode desativar o "Receptor AirPlay" e liberar a porta 5000 indo nos Ajustes do Sistema do Mac > Geral > AirDrop e Handoff).*
+
 ### 6. Acesse o site no navegador
 
 Abra o navegador e vá para:
-**http://localhost:5000/**
+**http://localhost:5000/** (ou **http://localhost:5001/** caso tenha alterado a porta no passo anterior)
 
 ---
 
@@ -106,3 +114,45 @@ Essencial caso o seu backend Flask vá servir dados via JSON para aplicações f
 ```bash
 uv add flask-cors
 ```
+
+### Documentação Automática (Swagger/OpenAPI)
+
+Para ter o Swagger (igual ao FastAPI), a melhor opção moderna é o `flask-smorest`. Ele gera a documentação baseada em classes e esquemas.
+
+**1. Instale a extensão:**
+```bash
+uv add flask-smorest
+```
+
+**2. Exemplo básico de uso (substituindo o `app.py`):**
+
+```python
+from flask import Flask
+from flask.views import MethodView
+from flask_smorest import Api, Blueprint
+
+app = Flask(__name__)
+
+# Configurações do Swagger
+app.config["API_TITLE"] = "Minha API Flask"
+app.config["API_VERSION"] = "v1"
+app.config["OPENAPI_VERSION"] = "3.0.3"
+app.config["OPENAPI_URL_PREFIX"] = "/"
+app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
+app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
+
+api = Api(app)
+blp = Blueprint("usuarios", __name__, description="Operações de usuários")
+
+@blp.route("/hello")
+class HelloWorld(MethodView):
+    def get(self):
+        return {"message": "Hello, World!"}
+
+api.register_blueprint(blp)
+```
+
+**3. Onde encontrar o Swagger:**
+Após rodar o servidor, acesse:
+**http://localhost:5000/swagger-ui** (ou na porta 5001)
+

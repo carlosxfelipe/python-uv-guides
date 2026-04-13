@@ -72,15 +72,17 @@ Caso seu objetivo seja criar uma API, aqui estão as duas bibliotecas mais popul
 
 ### Django Rest Framework (DRF)
 
-A biblioteca clássica e mais robusta para APIs no ecossistema Django.
+A biblioteca clássica e mais robusta para APIs no ecossistema Django. **Dica:** Para ter Swagger no DRF, você precisa do pacote `drf-spectacular`.
 
 ```bash
-uv add djangorestframework
+uv add djangorestframework drf-spectacular
 ```
+
+_(Após instalar, adicione `'rest_framework'` e `'drf_spectacular'` ao seu `INSTALLED_APPS` e configure o `REST_FRAMEWORK` no `settings.py`)._
 
 ### Django Ninja
 
-Uma alternativa moderna, inspirada no FastAPI, que utiliza `Type Hints` do Python e é extremamente rápida.
+Uma alternativa moderna, inspirada no FastAPI, que utiliza `Type Hints` do Python e é extremamente rápida. **Vantagem:** O Swagger já vem incluído por padrão, sem precisar de pacotes extras.
 
 ```bash
 uv add django-ninja
