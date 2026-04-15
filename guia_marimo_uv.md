@@ -34,7 +34,6 @@ uv run marimo edit app.py
 
 Abra o navegador e vá para:
 **http://localhost:2718/**
-
 ---
 
 ## Modos Adicionais

@@ -57,7 +57,6 @@ Quando você for fazer o deploy ou não quiser auto-reload ativado, utilize a CL
 ```bash
 uv run fastapi run main.py
 ```
-
 ---
 
 ## Opções Comuns do Ecossistema
@@ -74,7 +73,7 @@ uv add pydantic-settings
 
 ### 2. SQLAlchemy e Alembic (Para Bancos de Dados)
 
-Diferente do Django, o FastAPI não possui banco de dados acoplado nativamente. O **SQLAlchemy** é o ORM mais estável e recomendado, e o **Alembic** é a sua ferramenta espelho responsável por aplicar as de migrações (`migrations`) desse banco de dados.
+Diferente do Django, o FastAPI não possui banco de dados acoplado nativamente. O **SQLAlchemy** é o ORM mais estável e recomendado, e o **Alembic** é a sua ferramenta espelho responsável por aplicar as migrações (`migrations`) desse banco de dados.
 
 ```bash
 uv add sqlalchemy alembic

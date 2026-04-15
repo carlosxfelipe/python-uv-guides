@@ -10,7 +10,6 @@ Este guia mostra como criar um projeto Python moderno usando [Flet](https://flet
 uv init meu_projeto --python 3.12
 ```
 
----
 
 ## 2. Entre na pasta do projeto
 
@@ -18,7 +17,6 @@ uv init meu_projeto --python 3.12
 cd meu_projeto
 ```
 
----
 
 ## 3. Instale o Flet (e bibliotecas úteis)
 
@@ -26,7 +24,6 @@ cd meu_projeto
 uv add flet
 ```
 
----
 
 ## 4. Exemplo de `main.py`
 
@@ -56,7 +53,6 @@ def main(page: ft.Page):
 ft.app(target=main)
 ```
 
----
 
 ## 5. Execute o app Flet
 
@@ -65,7 +61,6 @@ uv run python main.py
 ```
 
 O app abrirá no navegador ou em uma janela nativa, dependendo do seu sistema.
-
 ---
 
 ## 6. Recursos recomendados
@@ -74,6 +69,5 @@ O app abrirá no navegador ou em uma janela nativa, dependendo do seu sistema.
 - [Exemplos Flet no GitHub](https://github.com/flet-dev/examples)
 - [Flet no PyPI](https://pypi.org/project/flet/)
 
----
 
 Pronto! Seu projeto Flet está configurado para desenvolvimento moderno com uv.

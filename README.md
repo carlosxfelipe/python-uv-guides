@@ -28,6 +28,7 @@ pip install uv
 
 O repositório inclui os seguintes guias:
 
+- `guia_data_science_uv.md`: Projeto completo para exercícios de Ciência de Dados (Pandas, ML, SQLite).
 - `guia_django_uv.md`: Configuração de projetos Django.
 - `guia_fastapi_uv.md`: Configuração de APIs com FastAPI.
 - `guia_flask_uv.md`: Configuração de projetos web e APIs simples com Flask.
