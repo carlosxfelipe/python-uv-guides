@@ -49,7 +49,6 @@ import os
 import getpass
 import re
 import subprocess
-import sys
 
 CFG_PATH = "airflow.cfg"
 PASSWORDS_FILE = "simple_auth_manager_passwords.json.generated"
@@ -195,3 +194,65 @@ uv add apache-airflow-providers-docker
 uv add apache-airflow-providers-http
 uv add apache-airflow-providers-slack
 ```
+
+### 9. Arquivo .gitignore sugerido
+
+Para manter seu projeto limpo e evitar enviar arquivos temporários ou confidenciais para o Git, utilize o conteúdo abaixo no seu arquivo `.gitignore`:
+
+```text
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Airflow
+airflow.db
+airflow.db-shm
+airflow.db-wal
+airflow.cfg
+webserver_config.py
+logs/
+*.pid
+*.err
+*.log
+standalone_admin_password.txt
+simple_auth_manager_passwords.json
+simple_auth_manager_passwords.json.generated
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```
+
