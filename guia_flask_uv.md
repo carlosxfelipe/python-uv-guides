@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Flask com UV
+# Projeto Flask com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 

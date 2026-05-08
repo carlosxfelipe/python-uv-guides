@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Marimo com UV
+# Projeto Marimo com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 

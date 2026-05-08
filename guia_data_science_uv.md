@@ -1,4 +1,4 @@
-# Guia para Projeto de Ciência de Dados com UV
+# Projeto de Ciência de Dados com UV
 
 Este guia apresenta o setup completo para um projeto focado em exercícios de Ciência de Dados, cobrindo desde a manipulação de dados até o treinamento de modelos de Machine Learning e integração com bancos de dados SQLite.
 

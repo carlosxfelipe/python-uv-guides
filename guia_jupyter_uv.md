@@ -1,4 +1,4 @@
-# Guia para Criar um Ambiente Jupyter com UV
+# Ambiente Jupyter com UV
 
 Este guia mostra como configurar um ambiente para Análise de Dados e Ciência de Dados usando Jupyter Notebooks e ferramentas clássicas (Pandas, Matplotlib, etc.), com gerenciamento via `uv`.
 

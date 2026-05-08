@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Django com UV
+# Projeto Django com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 

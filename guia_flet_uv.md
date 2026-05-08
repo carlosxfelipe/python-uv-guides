@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Flet com UV
+# Projeto Flet com UV
 
 Este guia mostra como criar um projeto Python moderno usando [Flet](https://flet.dev/) para interfaces gráficas, com gerenciamento de ambiente e dependências via [uv](https://github.com/astral-sh/uv).
 

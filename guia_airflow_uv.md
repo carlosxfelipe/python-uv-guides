@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Airflow com UV
+# Projeto Airflow com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 

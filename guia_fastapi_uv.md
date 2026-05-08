@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto FastAPI com UV
+# Projeto FastAPI com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 

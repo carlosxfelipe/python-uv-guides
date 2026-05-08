@@ -1,4 +1,4 @@
-# Guia para Criar um Projeto Streamlit com UV
+# Projeto Streamlit com UV
 
 ### 1. Crie o projeto e o ambiente virtual
 
