@@ -80,8 +80,28 @@ _(Após instalar, adicione `'rest_framework'` e `'drf_spectacular'` ao seu `INST
 
 ### Django Ninja
 
-Uma alternativa moderna, inspirada no FastAPI, que utiliza `Type Hints` do Python e é extremamente rápida. **Vantagem:** O Swagger já vem incluído por padrão, sem precisar de pacotes extras.
+Uma alternativa moderna, inspirada no FastAPI, que utiliza `Type Hints` do Python (Pydantic) para validação de dados e é extremamente rápida.
+
+**Principais Benefícios:**
+- **Performance:** Construído sobre o Pydantic, é um dos frameworks mais rápidos para Django.
+- **Async:** Suporte nativo para funções assíncronas (`async def`).
+- **Auto-Documentação:** Swagger e Redoc vêm configurados por padrão em `/api/docs`.
+- **Tipagem Estática:** Menos bugs e melhor suporte de autocompletar no editor.
 
 ```bash
 uv add django-ninja
+```
+
+#### Django Ninja Extra (Recomendado para Projetos Maiores)
+
+Se você vem do Django Rest Framework (DRF) ou precisa de mais estrutura, o `django-ninja-extra` adiciona funcionalidades essenciais:
+
+**Vantagens do Extra:**
+- **Class-Based Views (Controllers):** Permite organizar rotas em classes, facilitando a organização de grandes projetos.
+- **Injeção de Dependências:** Facilita a gestão de serviços e desacoplamento de lógica.
+- **Permissões Avançadas:** Sistema de permissões robusto similar ao do DRF.
+- **Throttling:** Controle de taxa de requisições (rate limiting) integrado.
+
+```bash
+uv add django-ninja-extra
 ```
