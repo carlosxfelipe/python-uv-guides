@@ -1,24 +1,24 @@
 # Guia para Criar um Projeto Streamlit com UV
 
-## 1. Crie o projeto e o ambiente virtual
+### 1. Crie o projeto e o ambiente virtual
 
 ```bash
 uv init meu_projeto --python 3.12
 ```
 
-## 2. Entre na pasta do projeto
+### 2. Entre na pasta do projeto
 
 ```bash
 cd meu_projeto
 ```
 
-## 3. Adicione o Streamlit (e bibliotecas úteis)
+### 3. Adicione o Streamlit (e bibliotecas úteis)
 
 ```bash
 uv add streamlit pandas matplotlib plotly
 ```
 
-## 4. Exemplo de `main.py`:
+### 4. Exemplo de `main.py`:
 
 ```python
 import matplotlib.pyplot as plt
@@ -62,7 +62,7 @@ fig_plotly = px.bar(df, x="mês", y="vendas", title="Vendas por mês (Plotly)")
 st.plotly_chart(fig_plotly, use_container_width=True)
 ```
 
-## 5. Rodando o app
+### 5. Rodando o app
 
 ```bash
 uv run streamlit run main.py

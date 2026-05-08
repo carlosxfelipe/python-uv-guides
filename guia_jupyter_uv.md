@@ -5,21 +5,21 @@ Este guia mostra como configurar um ambiente para Análise de Dados e Ciência d
 
 ---
 
-## 1. Crie o projeto e o ambiente virtual
+### 1. Crie o projeto e o ambiente virtual
 
 ```bash
 uv init meu_projeto --python 3.12
 ```
 
 
-## 2. Entre na pasta do projeto
+### 2. Entre na pasta do projeto
 
 ```bash
 cd meu_projeto
 ```
 
 
-## 3. Instale as bibliotecas de dados e o Jupyter
+### 3. Instale as bibliotecas de dados e o Jupyter
 
 (Instalando pacotes comuns para manipulação de dados, visualização e o próprio Jupyter Notebook com seu kernel)
 
@@ -34,7 +34,7 @@ uv add pandas openpyxl matplotlib seaborn jupyter ipykernel wordcloud
 - `wordcloud`: Geração de nuvens de palavras.
 
 
-## 4. Inicie o Jupyter Notebook
+### 4. Inicie o Jupyter Notebook
 
 ```bash
 uv run jupyter notebook

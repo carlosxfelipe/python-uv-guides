@@ -4,28 +4,28 @@ Este guia mostra como criar um projeto Python moderno usando [Flet](https://flet
 
 ---
 
-## 1. Crie o projeto e o ambiente virtual
+### 1. Crie o projeto e o ambiente virtual
 
 ```bash
 uv init meu_projeto --python 3.12
 ```
 
 
-## 2. Entre na pasta do projeto
+### 2. Entre na pasta do projeto
 
 ```bash
 cd meu_projeto
 ```
 
 
-## 3. Instale o Flet (e bibliotecas úteis)
+### 3. Instale o Flet (e bibliotecas úteis)
 
 ```bash
 uv add flet
 ```
 
 
-## 4. Exemplo de `main.py`
+### 4. Exemplo de `main.py`
 
 ```python
 import flet as ft
@@ -54,7 +54,7 @@ ft.app(target=main)
 ```
 
 
-## 5. Execute o app Flet
+### 5. Execute o app Flet
 
 ```bash
 uv run python main.py

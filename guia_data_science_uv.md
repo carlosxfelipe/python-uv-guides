@@ -1,4 +1,4 @@
-# Guia: Projeto de Exercícios em Ciência de Dados com UV
+# Guia para Projeto de Ciência de Dados com UV
 
 Este guia apresenta o setup completo para um projeto focado em exercícios de Ciência de Dados, cobrindo desde a manipulação de dados até o treinamento de modelos de Machine Learning e integração com bancos de dados SQLite.
 
@@ -70,7 +70,7 @@ print("Alunos com nota acima de 7:")
 print(df_do_banco)
 ```
 
-### 5. Como trabalhar nos exercícios
+## 5. Como trabalhar nos exercícios
 
 #### Opção A: Via Jupyter Notebook (Recomendado)
 
@@ -93,7 +93,7 @@ uv run python exercicio.py
 
 ---
 
-### 6. Dica: Pratique sem precisar de arquivos externos
+## 6. Dica: Pratique sem precisar de arquivos externos
 
 Uma grande vantagem do `scikit-learn` é fornecer datasets clássicos (como Iris, Titanic e Boston Housing) prontos para uso. Isso é excelente para exercícios, pois você não precisa procurar ou baixar arquivos CSV para começar a praticar.
 
@@ -118,7 +118,7 @@ print(df_iris.head())
 
 ---
 
-### 7. Qualidade de Código (Dica de Pro)
+## 7. Qualidade de Código (Dica de Pro)
 
 Para manter seu código organizado e seguindo as normas (PEP 8), recomenda-se usar o **Ruff**. Ele é um linter e formatador extremamente rápido.
 
