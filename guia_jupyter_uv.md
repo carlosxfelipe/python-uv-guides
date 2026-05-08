@@ -2,6 +2,7 @@
 
 Este guia mostra como configurar um ambiente para Análise de Dados e Ciência de Dados usando Jupyter Notebooks e ferramentas clássicas (Pandas, Matplotlib, etc.), com gerenciamento via `uv`.
 
+
 ---
 
 ## 1. Crie o projeto e o ambiente virtual
@@ -40,6 +41,8 @@ uv run jupyter notebook
 ```
 
 Isso abrirá automaticamente no seu navegador o servidor do Jupyter na porta padrão (geralmente `http://localhost:8888`), e os seus pacotes estarão prontos para uso nos notebooks (`.ipynb`).
+
+
 ---
 
 ## 5. Dica: Usando com o VS Code

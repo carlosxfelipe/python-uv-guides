@@ -49,6 +49,7 @@ uv run python manage.py runserver
 
 Abra o navegador e vá para:
 **http://localhost:8000/**
+
 ---
 
 ## Primeiros passos após o setup
@@ -62,6 +63,7 @@ uv run python manage.py startapp nome_do_app apps/nome_do_app
 ```
 
 Substitua `nome_do_app` pelo nome desejado para o seu app.
+
 ---
 
 ## Opções para APIs

@@ -56,6 +56,7 @@ uv run flask run --debug
 
 Abra o navegador e vá para:
 **http://localhost:5000/** (ou **http://localhost:5001/** caso tenha alterado a porta no passo anterior)
+
 ---
 
 ## Primeiros passos após o setup
@@ -83,6 +84,7 @@ from usuarios import usuarios_bp
 
 app.register_blueprint(usuarios_bp)
 ```
+
 ---
 
 ## Opções Comuns do Ecossistema

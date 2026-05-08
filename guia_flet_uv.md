@@ -61,6 +61,7 @@ uv run python main.py
 ```
 
 O app abrirá no navegador ou em uma janela nativa, dependendo do seu sistema.
+
 ---
 
 ## 6. Recursos recomendados
