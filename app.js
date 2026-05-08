@@ -15,7 +15,7 @@ const guidesList = [
   { id: "guia_streamlit_uv.md", title: "Streamlit" },
 ];
 
-const APP_TITLE = "Python UV Guides";
+const APP_TITLE = "Guias Python com UV";
 const APP_SUBTITLE = "Guia Prático de Gerenciamento de Projetos";
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
             const words = text.split(/\s+/).length;
             const minutes = Math.ceil(words / 200);
             return { ...guide, readingTime: `${minutes} min` };
-          } catch (e) {
+          } catch (_e) {
             return { ...guide, readingTime: "---" };
           }
         }),
@@ -55,12 +55,40 @@ function App() {
     loadGuide(activeGuide.id);
   }, [activeGuide]);
 
-  // Aplica o Syntax Highlighting após o Preact injetar o HTML
+  // Aplica o Syntax Highlighting e adiciona botões de copiar
   useEffect(() => {
-    if (content && contentRef.current && window.hljs) {
-      const blocks = contentRef.current.querySelectorAll("pre code");
-      blocks.forEach((block) => {
-        window.hljs.highlightElement(block);
+    if (content && contentRef.current) {
+      // Syntax Highlighting
+      if (globalThis.hljs) {
+        const blocks = contentRef.current.querySelectorAll("pre code");
+        blocks.forEach((block) => {
+          globalThis.hljs.highlightElement(block);
+        });
+      }
+
+      // Botões de Copiar
+      const preBlocks = contentRef.current.querySelectorAll("pre");
+      preBlocks.forEach((pre) => {
+        if (pre.querySelector(".copy-btn")) return;
+
+        const button = document.createElement("button");
+        button.className = "copy-btn";
+        button.innerHTML = "Copiar";
+
+        button.onclick = () => {
+          const code = pre.querySelector("code")?.innerText || pre.innerText;
+          navigator.clipboard.writeText(code).then(() => {
+            button.innerHTML = "Copiado!";
+            button.classList.add("copied");
+            setTimeout(() => {
+              button.innerHTML = "Copiar";
+              button.classList.remove("copied");
+            }, 2000);
+          });
+        };
+
+        pre.style.position = "relative";
+        pre.appendChild(button);
       });
     }
   }, [content]);

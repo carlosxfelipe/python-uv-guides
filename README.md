@@ -1,4 +1,4 @@
-# Python UV Guides
+# Guias Python com UV
 
 Este repositório contém guias práticos para a criação de projetos Python utilizando o gerenciador de pacotes uv integrado a diferentes frameworks, como Django, FastAPI, Flask, Flet, Streamlit e Marimo.
 
