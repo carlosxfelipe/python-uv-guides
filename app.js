@@ -69,7 +69,12 @@ function App() {
       // Botões de Copiar
       const preBlocks = contentRef.current.querySelectorAll("pre");
       preBlocks.forEach((pre) => {
-        if (pre.querySelector(".copy-btn")) return;
+        if (pre.parentElement.classList.contains("code-wrapper")) return;
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "code-wrapper";
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
 
         const button = document.createElement("button");
         button.className = "copy-btn";
@@ -95,8 +100,7 @@ function App() {
           });
         };
 
-        pre.style.position = "relative";
-        pre.appendChild(button);
+        wrapper.appendChild(button);
 
         if (globalThis.lucide) {
           globalThis.lucide.createIcons();

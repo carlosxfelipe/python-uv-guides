@@ -214,12 +214,17 @@ body {
   color: var(--inline-code-text);
 }
 
+.code-wrapper {
+  position: relative;
+  margin: 24px 0;
+}
+
 .markdown-body pre {
   background-color: var(--code-bg);
   padding: 20px;
   border-radius: 12px;
   overflow-x: auto;
-  margin: 24px 0;
+  margin: 0;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
