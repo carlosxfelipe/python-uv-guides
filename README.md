@@ -58,6 +58,7 @@ uv pip compile pyproject.toml -o requirements.txt
 
 ---
 
-Se algum destes guias foi útil para você, considere deixar uma ⭐ no [repositório](https://github.com/carlosxfelipe/python-uv-guides)!
+Se algum destes guias foi útil para você, considere deixar uma ⭐ no [Repositório Oficial](https://github.com/carlosxfelipe/python-uv-guides)!
 
-Desenvolvido por **Carlos Felipe Araújo** ([@carlosxfelipe](https://github.com/carlosxfelipe/python-uv-guides))
+Desenvolvido por **Carlos Felipe Araújo** ([@carlosxfelipe](https://github.com/carlosxfelipe))
+

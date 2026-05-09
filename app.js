@@ -73,22 +73,34 @@ function App() {
 
         const button = document.createElement("button");
         button.className = "copy-btn";
-        button.innerHTML = "Copiar";
+        button.innerHTML = '<i data-lucide="copy"></i>';
 
         button.onclick = () => {
           const code = pre.querySelector("code")?.innerText || pre.innerText;
           navigator.clipboard.writeText(code).then(() => {
-            button.innerHTML = "Copiado!";
+            button.innerHTML = '<i data-lucide="check"></i>';
             button.classList.add("copied");
+
+            if (globalThis.lucide) {
+              globalThis.lucide.createIcons();
+            }
+
             setTimeout(() => {
-              button.innerHTML = "Copiar";
+              button.innerHTML = '<i data-lucide="copy"></i>';
               button.classList.remove("copied");
+              if (globalThis.lucide) {
+                globalThis.lucide.createIcons();
+              }
             }, 2000);
           });
         };
 
         pre.style.position = "relative";
         pre.appendChild(button);
+
+        if (globalThis.lucide) {
+          globalThis.lucide.createIcons();
+        }
       });
     }
   }, [content]);
