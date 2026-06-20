@@ -80,3 +80,11 @@ uv add sqlalchemy alembic
 ```
 
 *(Dica: Lembre-se de adicionar também o driver nativo do seu respectivo banco, como o `asyncpg` ou `psycopg` para PostgreSQL).*
+
+### 3. Library Skills (Para Agentes de IA)
+
+Ensine o seu agente a usá-lo com a skill embutida no FastAPI 🤖:
+
+```bash
+uvx library-skills
+```
