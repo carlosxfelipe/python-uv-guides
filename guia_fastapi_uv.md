@@ -22,7 +22,15 @@ cd meu_projeto
 uv add "fastapi[standard]"
 ```
 
-### 4. Crie o arquivo principal da aplicação
+### 4. Library Skills (Para Agentes de IA)
+
+Ensine o seu agente a usá-lo com a skill embutida no FastAPI:
+
+```bash
+uvx library-skills
+```
+
+### 5. Crie o arquivo principal da aplicação
 
 Crie um arquivo chamado `main.py` com o seguinte conteúdo:
 
@@ -36,13 +44,13 @@ def read_root():
     return {"Hello": "World"}
 ```
 
-### 5. Inicie o servidor de desenvolvimento
+### 6. Inicie o servidor de desenvolvimento
 
 ```bash
 uv run fastapi dev main.py
 ```
 
-### 6. Acesse a aplicação no navegador
+### 7. Acesse a aplicação no navegador
 
 Abra o navegador e vá para:
 **http://localhost:8000/**
@@ -50,7 +58,7 @@ Abra o navegador e vá para:
 Você também pode acessar a documentação automática da API em:
 **http://localhost:8000/docs**
 
-### 7. Inicie o servidor em modo de Produção
+### 8. Inicie o servidor em modo de Produção
 
 Quando você for fazer o deploy ou não quiser auto-reload ativado, utilize a CLI para produção:
 
@@ -80,11 +88,3 @@ uv add sqlalchemy alembic
 ```
 
 *(Dica: Lembre-se de adicionar também o driver nativo do seu respectivo banco, como o `asyncpg` ou `psycopg` para PostgreSQL).*
-
-### 3. Library Skills (Para Agentes de IA)
-
-Ensine o seu agente a usá-lo com a skill embutida no FastAPI 🤖:
-
-```bash
-uvx library-skills
-```
