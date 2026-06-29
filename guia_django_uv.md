@@ -85,6 +85,7 @@ _(Após instalar, adicione `'rest_framework'` e `'drf_spectacular'` ao seu `INST
 Uma alternativa moderna, inspirada no FastAPI, que utiliza `Type Hints` do Python (Pydantic) para validação de dados e é extremamente rápida.
 
 **Principais Benefícios:**
+
 - **Performance:** Construído sobre o Pydantic, é um dos frameworks mais rápidos para Django.
 - **Async:** Suporte nativo para funções assíncronas (`async def`).
 - **Auto-Documentação:** Swagger e Redoc vêm configurados por padrão em `/api/docs`.
@@ -99,6 +100,7 @@ uv add django-ninja
 Se você vem do Django Rest Framework (DRF) ou precisa de mais estrutura, o `django-ninja-extra` adiciona funcionalidades essenciais:
 
 **Vantagens do Extra:**
+
 - **Class-Based Views (Controllers):** Permite organizar rotas em classes, facilitando a organização de grandes projetos.
 - **Injeção de Dependências:** Facilita a gestão de serviços e desacoplamento de lógica.
 - **Permissões Avançadas:** Sistema de permissões robusto similar ao do DRF.
@@ -106,4 +108,53 @@ Se você vem do Django Rest Framework (DRF) ou precisa de mais estrutura, o `dja
 
 ```bash
 uv add django-ninja-extra
+```
+
+---
+
+## Scalar — Interface de API moderna para Django Ninja
+
+O [Scalar](https://scalar.com) é uma interface de documentação de API moderna e bonita, que substitui o Swagger padrão. O pacote `scalar-ninja` integra o Scalar diretamente ao Django Ninja.
+
+### Instalação
+
+```bash
+uv add scalar-ninja
+```
+
+### Uso básico
+
+No arquivo onde você instancia o `NinjaAPI`, importe e passe o `ScalarViewer` para o parâmetro `docs`:
+
+```python
+from ninja import NinjaAPI
+from scalar_ninja import ScalarViewer
+
+api = NinjaAPI(
+    version="1.0.0",
+    title="API Reference",
+    description="Documentação da API",
+    docs=ScalarViewer(),
+)
+```
+
+A documentação ficará disponível em `/api/docs`.
+
+### Uso avançado (com configuração)
+
+```python
+from ninja import NinjaAPI
+from scalar_ninja import ScalarConfig, ScalarViewer
+
+scalar_config = ScalarConfig(
+    show_sidebar=False,
+    force_dark_mode_state="dark",
+)
+
+api = NinjaAPI(
+    version="1.0.0",
+    title="API Reference",
+    description="Documentação da API",
+    docs=ScalarViewer(scalar_config),
+)
 ```
